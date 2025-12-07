@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animate-slide {
+            animation: slideDown 0.3s ease-out;
+        }
+
+        
+        .hover-card:hover {
+            transform: scale(1.05);
+            border-color: #3b82f6;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link:hover {
+            color: #3b82f6;
+            transform: scale(1.05);
+        }
+
+       
+        .btn-hover:hover {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- HERO SECTION -->
+    <div id="home" class="relative bg-[url('./img/2.jpeg')] bg-cover bg-center bg-no-repeat h-screen w-full">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+
+        <!-- NAVBAR -->
+        <nav class="sticky top-0 left-0 w-full bg-black/40 backdrop-blur-md px-6 h-16 flex items-center z-50">
+            <div class="w-full max-w-7xl mx-auto flex justify-between items-center">
+                <div class="text-white text-xl font-semibold hover:text-blue-300 transition cursor-pointer">My Portfolio
+                </div>
+                <ul class="hidden md:flex gap-8 text-white text-lg">
+                    <li><a href="#home" class="nav-link transition">Home</a></li>
+                    <li><a href="#about" class="nav-link transition">About Me</a></li>
+                    <li><a href="#skills" class="nav-link transition">Skills</a></li>
+                    <li><a href="#experience" class="nav-link transition">Experience</a></li>
+                    <li><a href="#contact" class="nav-link transition">Contact</a></li>
+                </ul>
+                <button id="menu-btn" class="md:hidden text-white hover:scale-110 transition">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Dropdown -->
+        <ul id="mobile-menu"
+            class="absolute top-16 left-0 w-full bg-black/80 backdrop-blur-md text-white text-lg hidden flex-col gap-4 px-6 py-4 md:hidden z-50">
+            <li><a href="#home" class="nav-link transition">Home</a></li>
+            <li><a href="#about" class="nav-link transition">About Me</a></li>
+            <li><a href="#skills" class="nav-link transition">Skills</a></li>
+            <li><a href="#experience" class="nav-link transition">Experience</a></li>
+            <li><a href="#contact" class="nav-link transition">Contact</a></li>
+        </ul>
+
+        <!-- HERO CONTENT -->
+        <div
+            class="relative z-10 flex flex-col-reverse md:flex-row items-center justify-center gap-6 md:gap-10 h-full px-6 text-center md:text-left">
+            <div class="max-w-lg mt-6 md:mt-0">
+                <h2 class="text-3xl sm:text-4xl md:text-4xl font-bold mb-2 drop-shadow-lg">
+                    Kyaw Ngwe Hein Aung
+                </h2>
+                <span class="text-lg sm:text-xl text-blue-300 block mb-3 font-semibold">
+                    Data Analyst • Business Analyst
+                </span>
+                <p class="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed">
+                    Google-certified Business Intelligence professional skilled in data analysis, SQL,
+                    Tableau, and turning complex data into meaningful insights for data-driven decisions.
+                </p>
+            </div>
+            <div class="flex justify-center md:block mt-8 md:mt-0">
+                <img src="./img/profile.jpg"
+                    class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full border-4 border-white shadow-xl object-cover hover:scale-105 transition"
+                    alt="Profile">
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-16 text-white">
+        <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
+        <div class="bg-white/5 p-8 md:p-12 rounded-2xl shadow-md space-y-8 hover-card transition">
+            <div class="space-y-4">
+                <p class="text-lg sm:text-xl leading-relaxed">
+                    Hello, I’m <span class="font-semibold text-blue-300">Kyaw Ngwe Hein Aung</span>.
+                    I am a data professional focused on using the power of data to solve business challenges.
+                    I specialize in transforming raw information into clear, actionable intelligence that drives smarter
+                    decision-making.
+                </p>
+                <p class="text-lg sm:text-xl leading-relaxed">
+                    My passion lies in bridging the gap between numbers and strategy.
+                    I am actively seeking a role as a data analyst or BI specialist where I can contribute my robust
+                    analytical and visualization skills to an innovative team.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-2xl font-semibold text-blue-300">Certificates</h3>
+                <ul class="space-y-4 text-gray-200 text-[15px]">
+                    <li>
+                        <span class="font-semibold text-white">Google Business Intelligence Professional
+                            Certificate:</span>
+                        Focuses on utilizing BI tools to build effective reports, analyze data models, and communicate
+                        findings to stakeholders.
+                    </li>
+                    <li>
+                        <span class="font-semibold text-white">Google Data Analytics Professional Certificate:</span>
+                        Covers the entire data analysis lifecycle, including data cleaning, analysis, statistical
+                        interpretation, and communication.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-16 text-white">
+        <h2 class="text-4xl font-bold mb-12 text-center">Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="border border-white/10 bg-white/5 p-6 rounded-2xl shadow-md hover-card transition">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-database text-blue-300 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-blue-300">Data Tools</h3>
+                </div>
+                <ul class="space-y-2 text-gray-200 text-[15px]">
+                    <li>SQL</li>
+                    <li>Spreadsheets (Excel / Google Sheets)</li>
+                    <li>Tableau</li>
+                    <li>Looker Studio</li>
+                </ul>
+            </div>
+            <div class="border border-white/10 bg-white/5 p-6 rounded-2xl shadow-md hover-card transition">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-code text-green-300 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-green-300">Programming</h3>
+                </div>
+                <ul class="space-y-2 text-gray-200 text-[15px]">
+                    <li>R (or Python)</li>
+                </ul>
+            </div>
+            <div class="border border-white/10 bg-white/5 p-6 rounded-2xl shadow-md hover-card transition">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-chart-line text-yellow-300 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-yellow-300">Expertise</h3>
+                </div>
+                <ul class="space-y-2 text-gray-200 text-[15px]">
+                    <li>Data Cleaning</li>
+                    <li>Data Modeling</li>
+                    <li>Statistical Analysis</li>
+                    <li>Data Visualization</li>
+                    <li>Reporting & Dashboard Creation</li>
+                </ul>
+            </div>
+            <div
+                class="border border-white/10 bg-white/5 p-6 rounded-2xl shadow-md hover-card transition md:col-span-2 lg:col-span-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-user-tie text-purple-300 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-purple-300">Soft Skills</h3>
+                </div>
+                <ul class="space-y-2 text-gray-200 text-[15px]">
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Stakeholder Collaboration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="max-w-7xl mx-auto px-6 py-16 text-white">
+        <h2 class="text-4xl font-bold mb-12 text-center">Experience</h2>
+
+        <div class="bg-white/5 p-8 md:p-12 rounded-2xl shadow-md hover-card transition max-w-4xl mx-auto mb-8">
+            <h3 class="text-2xl font-semibold mb-1 text-blue-300">Certified Analyst (Project Work)</h3>
+            <p class="text-gray-300 italic mb-4">Google Career Certificates | December 2025</p>
+            <p class="text-gray-200 mb-4">
+                During these programs, I applied analytical methodologies to real-world business scenarios.
+            </p>
+            <h4 class="text-lg font-semibold text-white mb-2">Key Projects:</h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-200 mb-4">
+                <li>Analyzed large datasets to identify key trends and patterns.</li>
+                <li>Developed interactive dashboards to track Key Performance Indicators (KPIs) effectively.</li>
+            </ul>
+            <h4 class="text-lg font-semibold text-white mb-2">Responsibilities:</h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-200">
+                <li>Data validation and cleaning</li>
+                <li>Interpreting statistical findings</li>
+                <li>Presenting clear data stories and recommendations</li>
+            </ul>
+        </div>
+
+        <div class="bg-white/5 p-8 md:p-12 rounded-2xl shadow-md hover-card transition max-w-4xl mx-auto mb-8">
+            <h3 class="text-2xl font-semibold mb-1 text-blue-300">Google Certification Projects</h3>
+            <p class="text-gray-300 italic mb-4">Hands-on Project Experience | Dates You Completed the Courses</p>
+            <p class="text-gray-200 mb-4">
+                Through project-based learning in both Google certificate programs, I gained practical experience in
+                applying analytical methodologies to real-world business scenarios.
+            </p>
+            <h4 class="text-lg font-semibold text-white mb-2">Project 1: Data Analytics Case Study</h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-200 mb-4">
+                <li>Description: Applied the 6-step data analysis process (ask, prepare, process, analyze, share, act)
+                    to a large public dataset.</li>
+                <li>Outcome: Analyzed bike-share usage trends to provide data-driven recommendations on optimizing
+                    marketing strategies for casual riders versus annual members.</li>
+                <li>Tools Used: Spreadsheets, SQL, R, Tableau</li>
+            </ul>
+            <h4 class="text-lg font-semibold text-white mb-2">Project 2: Business Intelligence Dashboard Creation</h4>
+            <ul class="list-disc list-inside space-y-2 text-gray-200">
+                <li>Description: Developed comprehensive BI reports to track Key Performance Indicators (KPIs) for a
+                    simulated sales department.</li>
+                <li>Outcome: Created interactive dashboards that enabled stakeholders to monitor regional performance,
+                    identify sales bottlenecks, and make immediate strategic adjustments.</li>
+                <li>Tools Used: SQL, Tableau / Looker Studio</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH EMAILJS -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-16 text-white">
+        <h2 class="text-4xl font-bold mb-12 text-center">Contact Me</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white/5 p-8 rounded-2xl shadow-md hover-card transition">
+                <h3 class="text-2xl font-semibold mb-6 text-blue-300">Send me a message</h3>
+                <form id="contact-form" class="space-y-4">
+                    <div>
+                        <label class="block mb-1 text-gray-200" for="name">Name</label>
+                        <input type="text" id="name" name="user_name" required
+                            class="w-full p-3 rounded-lg bg-white/10 text-white border border-white/20 focus:outline-none focus:border-blue-400"
+                            placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-200" for="email">Email</label>
+                        <input type="email" id="email" name="user_email" required
+                            class="w-full p-3 rounded-lg bg-white/10 text-white border border-white/20 focus:outline-none focus:border-blue-400"
+                            placeholder="Your Email">
+                    </div>
+                    <div>
+                        <label class="block mb-1 text-gray-200" for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full p-3 rounded-lg bg-white/10 text-white border border-white/20 focus:outline-none focus:border-blue-400"
+                            placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="px-6 py-3 bg-blue-400 text-white font-semibold rounded-lg btn-hover transition">
+                        Send Message
+                    </button>
+                    <p id="form-message" class="text-green-400 mt-2 hidden"></p>
+                </form>
+            </div>
+            <div class="bg-white/5 p-8 rounded-2xl shadow-md space-y-6 hover-card transition">
+                <h3 class="text-2xl font-semibold mb-4 text-blue-300">Contact Details</h3>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-map-marker-alt text-blue-300 text-xl"></i>
+                    <p class="text-sm sm:text-base">Yangon, Myanmar</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-phone-alt text-blue-300 text-xl"></i>
+                    <p class="text-sm sm:text-base">09684565567</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <i class="fas fa-envelope text-blue-300 text-xl"></i>
+                    <p class="text-sm sm:text-base">kyawngweheinaung84@gmail.com</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-black/90 text-gray-400 py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <h2 class="text-white text-2xl font-bold mb-2 hover:text-blue-400 transition cursor-pointer">My
+                    Portfolio</h2>
+                <p class="text-gray-400 text-sm">
+                    Data Analyst & Business Analyst. Turning data into actionable insights with SQL, Tableau, and more.
+                </p>
+            </div>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a href="https://www.linkedin.com/in/kyaw-ngwe-hein-aung-3bb583343?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                    class="text-gray-400 hover:text-blue-400 transition"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm mt-8">
+            &copy; 2025 Kyaw Ngwe Hein Aung. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("omWAYmRPGxf1HGiS-"); 
+    </script>
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById("contact-form");
+        const formMessage = document.getElementById("form-message");
+
+        contactForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_x9ucl25', 'template_28tn77a', this)
+                .then(() => {
+                    formMessage.classList.remove("hidden");
+                    formMessage.textContent = "Message sent successfully!";
+                    contactForm.reset();
+                }, (error) => {
+                    formMessage.classList.remove("hidden");
+                    formMessage.textContent = "Failed to send message. Please try again.";
+                    console.error("EmailJS error:", error);
+                });
+        });
+    </script>
+</body>
+
+</html>
